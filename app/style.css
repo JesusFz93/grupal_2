@@ -25,3 +25,48 @@ body {
     justify-content: center;
     margin-top: 50px;
 }
+
+/* Utilizar un padre con la position absolute y poner un background black */
+
+@keyframes ldio-wtj6pwr2k4h {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.45,0,0.9,0.55)
+    }
+    0% {
+      transform: translate(0,0)
+    }
+    50% {
+      transform: translate(0,108px);
+      animation-timing-function: cubic-bezier(0,0.45,0.55,0.9);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+  
+  .ldio-wtj6pwr2k4h div {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #e15b64;
+    left: 74px;
+    top: 20px;
+    animation: ldio-wtj6pwr2k4h 1s linear infinite;
+  }
+  .loadingio-spinner-ball-2pfuiva9u8m {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .ldio-wtj6pwr2k4h {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-wtj6pwr2k4h div { box-sizing: content-box; }
