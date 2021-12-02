@@ -4,7 +4,7 @@
 
         const url = 'https://jsonplaceholder.typicode.com/users';
                 
-        fetch(`${url}`)
+        fetch(`https://jsonplaceholder.typicode.com/usersl`)
             .then((respuesta) => respuesta.json())
             .then((resultado) => {
 
