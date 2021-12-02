@@ -10,7 +10,15 @@ body {
   background: #f5f5f5;
 }
 
-.contenidoPrincipal {
+h2{
+  font-family:"Exo 2", sans-serif;
+  font-size: 2em;
+  color: #0c1261;
+  text-align:center;
+  padding: 2%;
+  margin: 0%;
+}
+.container{
   width: 80%;
   display: flex;
   align-items: center;
@@ -25,6 +33,7 @@ body {
   justify-content: center;
   margin-top: 50px;
 }
+
 
 
 /* Estilos del loader */
