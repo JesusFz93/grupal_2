@@ -1,7 +1,7 @@
 {
   "name": "grupal_2",
   "version": "1.0.0",
-  "description": "Jesus, Luisa, Kevin, Bernardo, Alberto, Lulu",
+  "description": "Jesus, Luisa, Kevin, Alberto, Lulu",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
