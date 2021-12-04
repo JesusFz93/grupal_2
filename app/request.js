@@ -54,6 +54,10 @@ const msjAdvertencia = () => {
     toastr["warning"]("Opción no válida!")
 }
 
+const msjProgreso = () => {
+    toastr["info"]("Funcionalidad proxima a desarrollar...")
+}
+
 const imprimirOpcion = () => {
     const sel = document.getElementById("select");
     const opcion = sel.options[sel.selectedIndex];
