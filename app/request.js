@@ -1,3 +1,30 @@
+const user_name = document.getElementById("user_name");
+const user_username = document.getElementById("user_username");
+const user_email = document.getElementById("user_email");
+const user_street = document.getElementById("user_street");
+
+window.onload = () => {
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+      
+    obtenerValorDelApi();
+}
+
 const obtenerValorDelApi = () => {
 
     const loader = document.getElementById("loader");
@@ -23,17 +50,25 @@ const obtenerValorDelApi = () => {
     loader.style.display = "none";
 }
 
-
-window.onload = () => {
-    obtenerValorDelApi();
-    toastr["success"]("Bienvenido a la pagina de prueba de la API de JSONPlaceholder", "Bienvenido");
+const msjAdvertencia = () => {
+    toastr["warning"]("Opción no válida!")
 }
 
 const imprimirOpcion = () => {
     const sel = document.getElementById("select");
     const opcion = sel.options[sel.selectedIndex];
 
+    console.log(opcion.value);
+
+    if(opcion.value === "nooption") {
+        msjAdvertencia();
+        limpiar();
+
+        return false;
+    }
+       
     obtenerValorDelApiEspecifico(`https://jsonplaceholder.typicode.com/users/${opcion.value}`);
+
 }
 
 const obtenerValorDelApiEspecifico = (url) => {
@@ -45,11 +80,6 @@ const obtenerValorDelApiEspecifico = (url) => {
         .then((respuesta) => respuesta.json())
         .then((resultado) => {
 
-            const user_name = document.getElementById("user_name");
-            const user_username = document.getElementById("user_username");
-            const user_email = document.getElementById("user_email");
-            const user_street = document.getElementById("user_street");
-
             user_name.innerHTML = resultado.name;
             user_username.innerHTML = resultado.username;
             user_email.innerHTML = resultado.email;
@@ -59,6 +89,16 @@ const obtenerValorDelApiEspecifico = (url) => {
     })
     .catch((error) => {
         console.log(error);
+        msjAdvertencia();
+        limpiar();
         loader.style.display = "none";
+        
     });
+}
+
+const limpiar = () => {
+    user_name.innerHTML = "Name";
+    user_username.innerHTML = "Username";
+    user_email.innerHTML = "Email";
+    user_street.innerHTML = "Street";
 }
