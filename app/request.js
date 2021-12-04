@@ -45,8 +45,6 @@ const obtenerValorDelApi = () => {
                 sel.appendChild(opt);
             }
     });
-
-    
     loader.style.display = "none";
 }
 
