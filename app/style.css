@@ -89,7 +89,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: clip-path 0.1s ease-in-out;
+  transition: clip-path 0.3s ease-in-out;
 }
 
 .btn.btn-primary {
@@ -116,3 +116,35 @@ h2 {
   -moz-appearance: none;
   appearance: none;
 }
+
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+footer {
+  background: #212529;
+  position: absolute;
+  bottom: 0;
+}
+
+
